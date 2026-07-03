@@ -1,0 +1,147 @@
+$card:#171c24;
+$border:#2b3446;
+
+$primary:#ff2d75;
+
+$green:#22c55e;
+
+$text:#ffffff;
+$text2:#a5afc0;
+
+.roadmap{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/* ======================== */
+
+.roadmap-card{
+
+    background:$card;
+
+    border:1px solid $border;
+
+    border-radius:16px;
+
+    padding:24px;
+
+    transition:.25s;
+
+}
+
+.roadmap-card:hover{
+
+    border-color:#434b61;
+
+    transform:translateY(-2px);
+
+}
+
+/* ======================== */
+
+.roadmap-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+/* ======================== */
+
+.day-badge{
+
+    background:rgba(255,45,117,.15);
+
+    color:$primary;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ======================== */
+
+.focus{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.focus svg{
+
+    color:$primary;
+
+    font-size:22px;
+
+}
+
+.focus h3{
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+/* ======================== */
+
+.tasks{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.task{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+}
+
+.task svg{
+
+    color:$green;
+
+    font-size:20px;
+
+    margin-top:2px;
+
+    flex-shrink:0;
+
+}
+
+.task span{
+
+    color:$text2;
+
+    line-height:1.7;
+
+}

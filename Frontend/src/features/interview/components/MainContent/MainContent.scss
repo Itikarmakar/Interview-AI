@@ -1,0 +1,83 @@
+$border:#2b3446;
+$text:#ffffff;
+$text2:#97a0b3;
+
+.main-content{
+
+    width:100%;
+
+}
+
+/* ===================== */
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+.title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.title h2{
+
+    color:white;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+.title span{
+
+    background:#242c3d;
+
+    color:$text2;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+}
+
+/* ===================== */
+
+.questions{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ===================== */
+
+@media(max-width:768px){
+
+.title{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:10px;
+
+}
+
+.title h2{
+
+font-size:26px;
+
+}
+
+}

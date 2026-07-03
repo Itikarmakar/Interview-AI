@@ -1,0 +1,155 @@
+{
+  "matchScore": 90,
+  "technicalQuestions": [
+    {
+      "question": "Can you explain the concept of Virtual DOM in React and how it improves performance?",
+      "intention": "To assess the candidate's understanding of core React concepts and their ability to explain technical details.",
+      "answer": "The Virtual DOM is a lightweight copy of the actual DOM. When state changes, React first updates the Virtual DOM, then compares it with the previous Virtual DOM state (diffing). It then calculates the most efficient way to update the real DOM and applies only those changes. This minimizes direct DOM manipulations, which are expensive, leading to better performance."
+    },
+    {
+      "question": "Describe the event loop in Node.js and why it's crucial for its non-blocking I/O model.",
+      "intention": "To check the candidate's understanding of Node.js's asynchronous nature and its underlying concurrency model.",
+      "answer": "The event loop is a core part of Node.js that enables non-blocking I/O operations. It continuously checks the message queue for pending callbacks from asynchronous operations (like file I/O or network requests) and pushes them to the call stack for execution. This allows Node.js to handle multiple operations concurrently without waiting for one to finish, making it highly efficient for I/O-bound tasks."
+    },
+    {
+      "question": "You mentioned developing a MERN stack application. How would you handle error logging and reporting in a production environment for both frontend and backend?",
+      "intention": "To gauge the candidate's awareness of production-grade practices beyond basic development, especially error handling and monitoring.",
+      "answer": "For the backend (Node.js/Express.js), I would implement a centralized error handling middleware that catches all unhandled exceptions and promises rejections. It would log errors to a file or an external logging service like Winston or pino, and for production, integrate with a service like Sentry or LogRocket for real-time error tracking and reporting. For the frontend (React), I would use error boundaries to catch UI errors and also integrate with services like Sentry to log client-side errors, providing context like component stack traces and user actions."
+    },
+    {
+      "question": "Given a large dataset of user transactions in MongoDB, how would you query for all transactions made by a specific user within a given date range and then sort them by amount in descending order?",
+      "intention": "To evaluate the candidate's practical skills in querying MongoDB, including filtering and sorting.",
+      "answer": "I would use `db.collection.find()` with a query object that specifies the `userId` and a date range using `$gte` (greater than or equal to) and `$lte` (less than or equal to) operators. Then, I would chain the `.sort()` method, passing an object `{ amount: -1 }` to sort by amount in descending order. For example: `db.transactions.find({ userId: 'someUserId', date: { $gte: ISODate('2023-01-01T00:00:00Z'), $lte: ISODate('2023-01-31T23:59:59Z') } }).sort({ amount: -1 });`"
+    },
+    {
+      "question": "Explain the concept of 'closures' in JavaScript and provide a simple example of where they might be useful.",
+      "intention": "To assess deeper JavaScript knowledge beyond basic syntax, specifically understanding functional programming concepts.",
+      "answer": "A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In simpler terms, a closure gives you access to an outer function's scope from an inner function, even after the outer function has finished executing. They are useful for creating private variables and methods, memoization, or creating function factories. For example: `function makeCounter() { let count = 0; return function() { count++; return count; }; } const counter = makeCounter(); console.log(counter()); // 1 console.log(counter()); // 2` Here, the inner function 'remembers' `count` even after `makeCounter` has returned."
+    }
+  ],
+  "behavioralQuestions": [
+    {
+      "question": "Tell me about a time you faced a significant technical challenge during one of your projects or your internship. How did you approach it, and what was the outcome?",
+      "intention": "To understand the candidate's problem-solving process, resilience, and learning from difficult situations.",
+      "answer": "Use the STAR method: Situation, Task, Action, Result. Describe a specific technical bug or complex feature. Explain the steps taken to diagnose (e.g., debugging, researching documentation, seeking help). Highlight the tools or thought processes used. Conclude with the successful resolution and any lessons learned, focusing on personal growth."
+    },
+    {
+      "question": "You mentioned improving API response time by 20% during your internship. Can you elaborate on the steps you took to achieve this and how you measured the improvement?",
+      "intention": "To assess the candidate's ability to elaborate on their achievements, quantify results, and demonstrate technical impact.",
+      "answer": "Use the STAR method. Describe the specific API, the initial performance problem, and the tools used for measurement (e.g., Postman, browser dev tools, profiling). Explain the actions taken (e.g., optimizing database queries, adding indexing, caching, refactoring code, reducing payload size). Detail how the 20% improvement was measured and verified, and what impact it had."
+    },
+    {
+      "question": "Describe a situation where you had to collaborate with a team member on a project. What was your role, how did you handle disagreements, and what was the final outcome?",
+      "intention": "To evaluate teamwork, communication skills, and conflict resolution abilities, which are crucial for an intern role.",
+      "answer": "Use the STAR method. Describe a project where collaboration was essential. Clearly define your role and responsibilities. If there was a disagreement, explain the nature of it and how it was resolved (e.g., by presenting data, discussing pros and cons, compromising, or escalating if necessary). Emphasize effective communication and the positive final outcome achieved through teamwork."
+    },
+    {
+      "question": "How do you stay updated with new technologies and best practices in web development?",
+      "intention": "To understand the candidate's initiative for continuous learning and passion for the field.",
+      "answer": "Provide specific examples: following tech blogs (e.g., Medium, Dev.to), attending webinars or online courses (e.g., Udemy, Coursera), reading documentation, participating in developer communities (e.g., Stack Overflow, GitHub), or experimenting with new libraries/frameworks in personal projects. Show genuine curiosity and a structured approach to learning."
+    },
+    {
+      "question": "Tell me about a time you received constructive feedback. How did you react, and what did you do with that feedback?",
+      "intention": "To assess coachability, openness to feedback, and ability to grow from criticism.",
+      "answer": "Use the STAR method. Describe a specific instance where you received feedback (e.g., during code review, performance evaluation). Explain your initial reaction (e.g., listened attentively, asked clarifying questions). Detail the actions you took to address the feedback and demonstrate improvement. Highlight the positive outcome of applying the feedback and how it contributed to your development."
+    }
+  ],
+  "skillGaps": [
+    {
+      "skill": "TypeScript",
+      "severity": "medium"
+    },
+    {
+      "skill": "Docker",
+      "severity": "low"
+    },
+    {
+      "skill": "CI/CD",
+      "severity": "low"
+    },
+    {
+      "skill": "AWS deployment",
+      "severity": "low"
+    }
+  ],
+  "preparationPlan": [
+    {
+      "day": 1,
+      "focus": "React.js Deep Dive & Best Practices",
+      "tasks": [
+        "Review React Hooks (useState, useEffect, useContext, useReducer, useCallback, useMemo) and their use cases.",
+        "Understand React Router for client-side routing.",
+        "Explore component lifecycle methods and functional component equivalents.",
+        "Learn about React performance optimizations (e.g., memoization, lazy loading).",
+        "Solve 2-3 LeetCode 'Easy' problems related to array manipulation or strings using JavaScript."
+      ]
+    },
+    {
+      "day": 2,
+      "focus": "Node.js & Express.js Advanced Concepts",
+      "tasks": [
+        "Review Express.js middleware, routing, and error handling.",
+        "Understand asynchronous JavaScript (Promises, async/await) in detail.",
+        "Learn about authentication (JWT) and authorization best practices.",
+        "Explore data validation techniques (e.g., Joi, Express-validator).",
+        "Solve 2-3 LeetCode 'Medium' problems focused on trees or linked lists."
+      ]
+    },
+    {
+      "day": 3,
+      "focus": "MongoDB & Database Optimizations",
+      "tasks": [
+        "Review MongoDB CRUD operations and aggregation framework basics.",
+        "Understand indexing in MongoDB and its importance for query performance.",
+        "Learn about data modeling best practices for NoSQL databases.",
+        "Practice writing complex queries involving multiple conditions and sorting.",
+        "Solve 2-3 LeetCode 'Medium' problems involving dynamic programming or graphs."
+      ]
+    },
+    {
+      "day": 4,
+      "focus": "System Design Fundamentals & REST API Design",
+      "tasks": [
+        "Study REST principles and best practices for API design (e.g., idempotency, versioning, status codes).",
+        "Understand common API security considerations (e.g., rate limiting, input sanitization).",
+        "Learn basic system design concepts (e.g., load balancing, caching, microservices vs. monolith).",
+        "Review HTTP methods and their semantic uses.",
+        "Revisit Git commands: branching, merging, rebasing, resolving conflicts. Practice a small project with collaborators on GitHub."
+      ]
+    },
+    {
+      "day": 5,
+      "focus": "Problem Solving & Behavioral Prep",
+      "tasks": [
+        "Solve 3-4 LeetCode 'Medium' problems covering various data structures and algorithms.",
+        "Practice explaining your thought process for problem-solving out loud.",
+        "Prepare answers for common behavioral questions using the STAR method (teamwork, challenges, feedback, learning).",
+        "Research ABC Technologies' recent projects, tech stack, and company culture.",
+        "Formulate questions to ask the interviewer about the role, team, or company."
+      ]
+    },
+    {
+      "day": 6,
+      "focus": "Skill Gap - TypeScript & Docker Basics",
+      "tasks": [
+        "Complete an online tutorial for TypeScript basics (types, interfaces, enums).",
+        "Understand how to integrate TypeScript with React and Node.js.",
+        "Read introductory articles on Docker: what it is, containers vs. VMs, Dockerfile basics.",
+        "Learn common Docker commands (build, run, ps, stop, rm).",
+        "Try to 'dockerize' a simple Node.js application (if time permits)."
+      ]
+    },
+    {
+      "day": 7,
+      "focus": "Mock Interview & Review",
+      "tasks": [
+        "Conduct a mock technical interview with a peer or mentor, focusing on both coding and system design questions.",
+        "Conduct a mock behavioral interview.",
+        "Review all prepared answers and concepts.",
+        "Identify any remaining weak areas and do a quick brush-up.",
+        "Get a good night's sleep!"
+      ]
+    }
+  ],
+  "title": "Software Development Engineer Intern"
+}

@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  background: #0f172a;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* ================= BACKGROUND ================= */
+
+.background-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+  background-size: 42px 42px;
+}
+
+.pink-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(255, 45, 120, .28);
+  filter: blur(150px);
+  top: -150px;
+  left: -120px;
+}
+
+.blue-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, .22);
+  filter: blur(160px);
+  right: -120px;
+  bottom: -150px;
+}
+
+/* ================= CARD ================= */
+
+.login-card {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  max-width: 470px;
+
+  padding: 42px;
+
+  border-radius: 24px;
+
+  background: rgba(15, 23, 42, .72);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+      0 25px 60px rgba(0,0,0,.45);
+
+  animation: fadeUp .45s ease;
+}
+
+.logo {
+  width: fit-content;
+  margin: auto;
+
+  padding: 8px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.08);
+
+  color: #f472b6;
+
+  font-size: .95rem;
+
+  font-weight: 600;
+
+  margin-bottom: 24px;
+}
+
+.login-card h1 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* ================= FORM ================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group svg {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 20px;
+}
+
+.input-group input {
+  width: 100%;
+
+  height: 56px;
+
+  padding-left: 52px;
+  padding-right: 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  background: rgba(255,255,255,.05);
+
+  color: white;
+
+  font-size: .95rem;
+
+  transition: .3s;
+}
+
+.input-group input::placeholder {
+  color: #64748b;
+}
+
+.input-group input:focus {
+  outline: none;
+
+  border-color: #ff2d78;
+
+  background: rgba(255,255,255,.08);
+
+  box-shadow: 0 0 0 3px rgba(255,45,120,.18);
+}
+
+/* ================= BUTTON ================= */
+
+.login-btn {
+  height: 56px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg,#ff2d78,#ff5ea2);
+
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .25s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 14px 30px rgba(255,45,120,.35);
+}
+
+.login-btn:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+}
+
+/* ================= DIVIDER ================= */
+
+.divider {
+  margin: 28px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  color: #64748b;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(255,255,255,.08);
+}
+
+.divider span {
+  font-size: .85rem;
+}
+
+/* ================= GOOGLE BUTTON ================= */
+
+.google-btn {
+  width: 100%;
+
+  height: 54px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  background: rgba(255,255,255,.05);
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.google-btn:hover {
+  background: rgba(255,255,255,.08);
+}
+
+/* ================= FOOTER ================= */
+
+.footer,
+.signup {
+  margin-top: 28px;
+
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-size: .95rem;
+}
+
+.footer a,
+.signup a {
+  color: #ff5ea2;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  margin-left: 6px;
+}
+
+.footer a:hover,
+.signup a:hover {
+  color: white;
+}
+
+.error-message {
+  color: #ef4444;
+  margin: 12px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ================= SPINNER ================= */
+
+.spinner {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  border: 3px solid rgba(255,255,255,.3);
+  border-top: 3px solid white;
+
+  animation: spin .7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:640px){
+
+  .login-card{
+      padding:32px 24px;
+  }
+
+  .login-card h1{
+      font-size:1.7rem;
+  }
+
+}

@@ -1,0 +1,181 @@
+$card: #171c24;
+$card2: #1d2432;
+$border: #2d3446;
+
+$text: #ffffff;
+$text2: #adb4c4;
+
+$pink: #ff2d75;
+$green: #39d353;
+
+.question-card {
+
+    background: $card;
+
+    border: 1px solid $border;
+
+    border-radius: 14px;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+
+    transition: .25s;
+
+}
+
+.question-card:hover {
+
+    border-color: #3b4358;
+
+}
+
+/* ========================= */
+
+.question-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+}
+
+/* ========================= */
+
+.question-header .left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    flex: 1;
+
+}
+
+.question-number {
+
+    background: rgba(255,45,117,.15);
+
+    color: $pink;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    min-width: 42px;
+
+    text-align: center;
+
+}
+
+.question-header h3 {
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+}
+
+/* ========================= */
+
+.question-header button {
+
+    background: transparent;
+
+    border: none;
+
+    color: #8b93a6;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+/* ========================= */
+
+.question-body {
+
+    padding: 0 20px 20px;
+
+    border-top: 1px solid rgba(255,255,255,.05);
+
+}
+
+/* ========================= */
+
+.section {
+
+    margin-top: 20px;
+
+}
+
+.badge {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 6px 12px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+.intention {
+
+    background: rgba(139,92,246,.18);
+
+    color: #b78cff;
+
+}
+
+.answer {
+
+    background: rgba(57,211,83,.15);
+
+    color: #57e26f;
+
+}
+
+.section p {
+
+    color: $text2;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+}
+
+/* ========================= */
+
+.question-card.open {
+
+    border-color: #404962;
+
+}

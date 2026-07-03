@@ -1,0 +1,185 @@
+$card: #171c24;
+$border: #2b3446;
+
+$primary: #ff2d75;
+
+$green: #22c55e;
+$yellow: #f59e0b;
+$red: #ef4444;
+
+$text2: #9ba6b7;
+
+.right-sidebar {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/* ======================== */
+
+.card{
+
+    background:$card;
+
+    border:1px solid $border;
+
+    border-radius:16px;
+
+    padding:22px;
+
+}
+
+.card h3{
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+/* ======================== */
+
+.score-circle{
+
+    width:160px;
+
+    height:160px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    conic-gradient(
+        #ff2d75 var(--score),
+        #262d3d 0
+    );
+
+}
+
+.inner-circle{
+
+    width:125px;
+
+    height:125px;
+
+    border-radius:50%;
+
+    background:#11151d;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.inner-circle span{
+
+    color:white;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.score-text{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    color:$text2;
+
+}
+
+/* ======================== */
+
+.skills{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;   // changed from center
+    gap: 12px;
+
+    padding: 12px 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+.skill span {
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.skill small {
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+/* ======================== */
+
+.low{
+
+    background:rgba(34,197,94,.15);
+
+    border:1px solid rgba(34,197,94,.3);
+
+}
+
+.low small{
+
+    color:$green;
+
+}
+
+.medium{
+
+    background:rgba(245,158,11,.15);
+
+    border:1px solid rgba(245,158,11,.3);
+
+}
+
+.medium small{
+
+    color:$yellow;
+
+}
+
+.high{
+
+    background:rgba(239,68,68,.15);
+
+    border:1px solid rgba(239,68,68,.3);
+
+}
+
+.high small{
+
+    color:$red;
+
+}
